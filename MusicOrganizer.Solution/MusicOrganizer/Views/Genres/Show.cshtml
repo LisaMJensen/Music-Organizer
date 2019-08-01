@@ -1,0 +1,14 @@
+@using MusicOrganizer.Models;
+
+<h3>Here are all the artists in this genre:</h3>
+
+<ol>
+@foreach (Artist artist in @Model["artists"])
+{
+  <li><a href='/genres/@Model["genre"].Id/artists/@artist.Id'>@artist.Description</a></li>
+}
+</ol>
+
+<p><a href='/genres/@Model["genre"].Id/genres/new'>Add a new artist</a></p>
+<p><a href='/genres'>Return to genre list</a></p>
+<p><a href='/'>Return to Main Page</a></p>

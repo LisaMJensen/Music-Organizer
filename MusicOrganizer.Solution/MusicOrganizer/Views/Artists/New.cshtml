@@ -1,0 +1,8 @@
+<h1>Add a new item to @Model.Name</h1>
+
+<form action="/genres/@Model.Id/artists" method="post">
+  <input id="genreId" name="genreId" type="hidden" value="@Model.Id">
+  <label for="artistDescription">Artist Name</label>
+  <input id="artistDescription" name="artistDescription" type="text">
+  <button type='submit'>Add Artist</button>
+</form>                                                           

@@ -1,0 +1,18 @@
+@using MusicOrganizer.Models
+<h1>Music Catalog</h1>
+@if (Model.Count == 0)
+{
+  <p>There are no Artists in the Catalog.</p>
+}
+<ul>
+    @foreach (Artist artist in Model)
+    {
+      <li><a href='/artists/@artist.Id'>@artist.Description</a></li>
+    }
+</ul>
+
+<a href='/artists/new'>Add a new artist</a>
+
+<form action="/artists/delete" method="post">
+  <button type="submit" name="button">Clear All Artists</button>
+</form>
